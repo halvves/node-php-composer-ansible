@@ -13,7 +13,7 @@ RUN echo "deb http://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.
 RUN apt-get -y update && apt-get install -y nodejs yarn
 
 # install composer
-RUN curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # install ansible
 RUN easy_install pip
